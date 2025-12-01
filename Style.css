@@ -1,1 +1,44 @@
+body {
+    background-color: #F5F7FA;  /* fond clair */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
+header {
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+    color: #555;
+}
+
+nav {
+    margin-bottom: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0077CC;
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #005599;
+}
+
+.hero-image {
+    width: 300px; /* taille de ton image */
+    max-width: 80%;
+    margin-bottom: 50px;
+}
