@@ -19,22 +19,22 @@
 <section>
     <h2>Question 1 :</h2>
     <p>Qu’est-ce qu’un réseau informatique ?</p>
-    <ul>
-        <li>A. Un groupe de personnes</li>
-        <li>B. Un ensemble d’ordinateurs connectés</li>
-        <li>C. Une application</li>
-    </ul>
-    <p><strong>Réponse :</strong> B</p>
+    <button onclick="checkAnswer('A')">A. Un groupe de personnes</button>
+    <button onclick="checkAnswer('B')">B. Un ensemble d’ordinateurs connectés</button>
+    <button onclick="checkAnswer('C')">C. Une application</button>
 
-    <h2>Question 2 :</h2>
-    <p>Quel outil permet de connecter plusieurs ordinateurs ?</p>
-    <ul>
-        <li>A. Switch</li>
-        <li>B. Clé USB</li>
-        <li>C. Souris</li>
-    </ul>
-    <p><strong>Réponse :</strong> A</p>
+    <p id="result"></p>
 </section>
+
+<script>
+function checkAnswer(choice) {
+    if(choice === 'B') {
+        document.getElementById('result').innerText = "Bonne réponse ! 🎉";
+    } else {
+        document.getElementById('result').innerText = "Mauvaise réponse ❌";
+    }
+}
+</script>
 
 </body>
 </html>
