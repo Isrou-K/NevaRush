@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Quiz - NevaRush</title>
@@ -7,31 +7,112 @@
 </head>
 <body>
 
-<header>
-    <h1>Quiz Réseaux</h1>
-    <nav>
-        <a href="index.html">Accueil</a> |
-        <a href="cours.html">Cours</a> |
-        <a href="fiches.html">Fiches</a>
-    </nav>
-</header>
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="sommaire.html">Sommaire</a>
+    <a href="cours.html">Cours</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="fiches.html">Fiches recto-verso</a>
+</nav>
 
-<section>
-    <h2>Question 1 :</h2>
-    <p>Qu’est-ce qu’un réseau informatique ?</p>
-    <button onclick="checkAnswer('A')">A. Un groupe de personnes</button>
-    <button onclick="checkAnswer('B')">B. Un ensemble d’ordinateurs connectés</button>
-    <button onclick="checkAnswer('C')">C. Une application</button>
+<h1>Quiz Réseaux Informatiques</h1>
 
-    <p id="result"></p>
+<form>
+
+<!-- Question 1 -->
+<section id="q1">
+    <h3>1. Qu’est-ce qu’un réseau informatique ?</h3>
+    <input type="radio" name="q1" id="q1a" onclick="checkAnswer('q1','q1a')"> <label for="q1a">Un ensemble d’ordinateurs connectés</label><br>
+    <input type="radio" name="q1" id="q1b" onclick="checkAnswer('q1','q1b')"> <label for="q1b">Un seul ordinateur isolé</label><br>
+    <input type="radio" name="q1" id="q1c" onclick="checkAnswer('q1','q1c')"> <label for="q1c">Un logiciel</label>
+    <p id="q1-result" style="font-weight:bold;"></p>
 </section>
 
+<!-- Question 2 -->
+<section id="q2">
+    <h3>2. Quel équipement sert à connecter plusieurs ordinateurs dans un réseau local ?</h3>
+    <input type="radio" name="q2" id="q2a" onclick="checkAnswer('q2','q2a')"> <label for="q2a">Routeur</label><br>
+    <input type="radio" name="q2" id="q2b" onclick="checkAnswer('q2','q2b')"> <label for="q2b">Switch</label><br>
+    <input type="radio" name="q2" id="q2c" onclick="checkAnswer('q2','q2c')"> <label for="q2c">Ordinateur</label>
+    <p id="q2-result" style="font-weight:bold;"></p>
+</section>
+
+<!-- Question 3 -->
+<section id="q3">
+    <h3>3. Que signifie LAN ?</h3>
+    <input type="radio" name="q3" id="q3a" onclick="checkAnswer('q3','q3a')"> <label for="q3a">Large Area Network</label><br>
+    <input type="radio" name="q3" id="q3b" onclick="checkAnswer('q3','q3b')"> <label for="q3b">Local Area Network</label><br>
+    <input type="radio" name="q3" id="q3c" onclick="checkAnswer('q3','q3c')"> <label for="q3c">Long Access Network</label>
+    <p id="q3-result" style="font-weight:bold;"></p>
+</section>
+
+<!-- Question 4 -->
+<section id="q4">
+    <h3>4. Quel est l’inconvénient principal d’un réseau en bus ?</h3>
+    <input type="radio" name="q4" id="q4a" onclick="checkAnswer('q4','q4a')"> <label for="q4a">Si le câble principal tombe, tout le réseau tombe</label><br>
+    <input type="radio" name="q4" id="q4b" onclick="checkAnswer('q4','q4b')"> <label for="q4b">Il coûte très cher</label><br>
+    <input type="radio" name="q4" id="q4c" onclick="checkAnswer('q4','q4c')"> <label for="q4c">Impossible de partager des fichiers</label>
+    <p id="q4-result" style="font-weight:bold;"></p>
+</section>
+
+<!-- Question 5 -->
+<section id="q5">
+    <h3>5. Quel réseau couvre une grande zone géographique comme un pays ?</h3>
+    <input type="radio" name="q5" id="q5a" onclick="checkAnswer('q5','q5a')"> <label for="q5a">LAN</label><br>
+    <input type="radio" name="q5" id="q5b" onclick="checkAnswer('q5','q5b')"> <label for="q5b">WAN</label><br>
+    <input type="radio" name="q5" id="q5c" onclick="checkAnswer('q5','q5c')"> <label for="q5c">PAN</label>
+    <p id="q5-result" style="font-weight:bold;"></p>
+</section>
+
+<!-- Question 6 -->
+<section id="q6">
+    <h3>6. Quelle topologie relie tous les ordinateurs à un concentrateur central ?</h3>
+    <input type="radio" name="q6" id="q6a" onclick="checkAnswer('q6','q6a')"> <label for="q6a">Bus</label><br>
+    <input type="radio" name="q6" id="q6b" onclick="checkAnswer('q6','q6b')"> <label for="q6b">Étoile</label><br>
+    <input type="radio" name="q6" id="q6c" onclick="checkAnswer('q6','q6c')"> <label for="q6c">Anneau</label>
+    <p id="q6-result" style="font-weight:bold;"></p>
+</section>
+
+<!-- Question 7 -->
+<section id="q7">
+    <h3>7. Que signifie PAN ?</h3>
+    <input type="radio" name="q7" id="q7a" onclick="checkAnswer('q7','q7a')"> <label for="q7a">Personal Area Network</label><br>
+    <input type="radio" name="q7" id="q7b" onclick="checkAnswer('q7','q7b')"> <label for="q7b">Public Access Network</label><br>
+    <input type="radio" name="q7" id="q7c" onclick="checkAnswer('q7','q7c')"> <label for="q7c">Private Area Network</label>
+    <p id="q7-result" style="font-weight:bold;"></p>
+</section>
+
+<!-- Question 8 -->
+<section id="q8">
+    <h3>8. Quel est l’avantage principal d’un réseau informatique ?</h3>
+    <input type="radio" name="q8" id="q8a" onclick="checkAnswer('q8','q8a')"> <label for="q8a">Permet le partage de fichiers et ressources</label><br>
+    <input type="radio" name="q8" id="q8b" onclick="checkAnswer('q8','q8b')"> <label for="q8b">Évite d’avoir Internet</label><br>
+    <input type="radio" name="q8" id="q8c" onclick="checkAnswer('q8','q8c')"> <label for="q8c">Empêche les communications entre utilisateurs</label>
+    <p id="q8-result" style="font-weight:bold;"></p>
+</section>
+
+</form>
+
 <script>
-function checkAnswer(choice) {
-    if(choice === 'B') {
-        document.getElementById('result').innerText = "Bonne réponse ! 🎉";
+function checkAnswer(question, selected) {
+    const correctAnswers = {
+        q1: 'q1a',
+        q2: 'q2b',
+        q3: 'q3b',
+        q4: 'q4a',
+        q5: 'q5b',
+        q6: 'q6b',
+        q7: 'q7a',
+        q8: 'q8a'
+    };
+
+    const result = document.getElementById(question + '-result');
+    if(selected === correctAnswers[question]){
+        result.textContent = "✅ Bonne réponse !";
+        result.style.color = "green";
     } else {
-        document.getElementById('result').innerText = "Mauvaise réponse ❌";
+        result.textContent = "❌ Mauvaise réponse !";
+        result.style.color = "red";
     }
 }
 </script>
