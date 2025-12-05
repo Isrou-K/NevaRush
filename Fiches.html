@@ -1,30 +1,179 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Fiches - NevaRush</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Fiches – Réseaux informatiques</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      padding: 20px;
+      color: #333;
+    }
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      width: 280px;
+      height: 180px;
+      perspective: 1000px;
+      cursor: pointer;
+    }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .card:hover .card-inner,
+    .card.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .card-front {
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: #fff;
+      font-weight: 600;
+    }
+    .card-back {
+      transform: rotateY(180deg);
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      color: #333;
+      font-weight: 400;
+    }
+    .card-back p {
+      margin: 0;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <h1>Fiches Réseaux</h1>
-    <nav>
-        <a href="index.html">Accueil</a> |
-        <a href="cours.html">Cours</a> |
-        <a href="quiz.html">Quiz</a>
-    </nav>
-</header>
+  <h1>Fiches Réseaux Informatiques</h1>
+  <div class="cards-container">
 
-<section>
-    <h2>Fiche 1</h2>
-    <p><strong>Recto :</strong> Qu’est-ce qu’un réseau informatique ?</p>
-    <p><strong>Verso :</strong> Un ensemble d’ordinateurs connectés permettant le partage d’informations.</p>
+    <!-- Définition -->
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">Qu'est-ce qu'un réseau informatique ?</div>
+        <div class="card-face card-back">
+          <p>Un réseau informatique est un ensemble d'équipements reliés pour partager des ressources et des informations.</p>
+        </div>
+      </div>
+    </div>
 
-    <h2>Fiche 2</h2>
-    <p><strong>Recto :</strong> À quoi sert un switch ?</p>
-    <p><strong>Verso :</strong> À connecter plusieurs appareils dans un réseau local.</p>
-</section>
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">Objectifs principaux d’un réseau ?</div>
+        <div class="card-face card-back">
+          <p>Permettre le partage de données, l'accès aux ressources, faciliter la communication et améliorer la collaboration.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avantages / Inconvénients -->
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">Avantages d’un réseau informatique ?</div>
+        <div class="card-face card-back">
+          <p>Partage de ressources, communication rapide, centralisation des données, collaboration facilitée.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">Inconvénients d’un réseau informatique ?</div>
+        <div class="card-face card-back">
+          <p>Coût d’installation, maintenance, risques de sécurité, complexité de gestion.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Équipements -->
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">Quels sont les équipements principaux ?</div>
+        <div class="card-face card-back">
+          <p>Switch, routeur, serveur, points d'accès, câbles, ordinateurs.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">Rôle du switch et du routeur ?</div>
+        <div class="card-face card-back">
+          <p>Switch : connecte les appareils dans le même réseau local (LAN).<br>
+             Routeur : relie différents réseaux et permet l’accès à Internet.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Classification géographique -->
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">Quelles sont les classifications géographiques ?</div>
+        <div class="card-face card-back">
+          <p>LAN (Local), MAN (Metropolitain), WAN (Wide), PAN (Personal Area Network).</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">Différence LAN / WAN ?</div>
+        <div class="card-face card-back">
+          <p>LAN : réseau local limité à un bâtiment ou site.<br>
+             WAN : réseau étendu couvrant de grandes distances, souvent Internet.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Topologie -->
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">Quelles sont les topologies de réseau ?</div>
+        <div class="card-face card-back">
+          <p>Étoile, bus, anneau, maillage (mesh), arbre.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" onclick="this.classList.toggle('flipped')">
+      <div class="card-inner">
+        <div class="card-face card-front">Topologie la plus utilisée ?</div>
+        <div class="card-face card-back">
+          <p>La topologie en étoile est la plus courante car elle est facile à gérer et dépanner.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 </body>
 </html>
