@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Cours - Réseaux Informatiques</title>
+<meta charset="UTF-8">
+<title>Cours - NevaRush</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body { text-align:center; font-family:Arial; background:#f2f2f2; margin:0 }
+img { width:90%; max-width:900px; border-radius:10px; margin-top:30px }
+.nav { margin-top:20px }
+button {
+    padding:10px 18px;
+    font-size:18px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    margin:10px;
+}
+#prev { background:#ccc }
+#next { background:#4A90E2; color:white }
+</style>
 </head>
+
 <body>
-    <h1>Mon Cours sur les Réseaux Informatiques</h1>
 
-    <section id="page3">
-        <h2>Définition d'un réseau informatique</h2>
-        <img src="Images/page3.png" alt="Définition" style="width:80%; display:block; margin:auto;">
-    </section>
+<h1>📘 Cours – Réseaux Informatiques</h1>
 
-    <section id="page4">
-        <h2>Avantages et Inconvénients</h2>
-        <img src="Images/page4.png" alt="Avantages et Inconvénients" style="width:80%; display:block; margin:auto;">
-    </section>
+<img id="slide" src="Images/page3.png" alt="Cours Réseaux">
 
-    <section id="page5">
-        <h2>Équipements d’un réseau</h2>
-        <img src="Images/page5.png" alt="Équipements" style="width:80%; display:block; margin:auto;">
-    </section>
+<div class="nav">
+<button id="prev">⬅ Précédent</button>
+<button id="next">Suivant ➡</button>
+</div>
 
-    <section id="page6">
-        <h2>Classification géographique</h2>
-        <img src="Images/page6.png" alt="Classification" style="width:80%; display:block; margin:auto;">
-    </section>
+<script>
+const slides = [
+    "Images/page3.png", // Définition
+    "Images/page4.png", // Avantages/Inconvénients
+    "Images/page5.png", // Équipements
+    "Images/page6.png", // Classification
+    "Images/page7.png"  // Topologie
+];
 
-    <section id="page7">
-        <h2>Topologie des réseaux</h2>
-        <img src="Images/page7.png" alt="Topologie" style="width:80%; display:block; margin:auto;">
-    </section>
+let current = 0;
+document.getElementById("slide").src = slides[current];
 
-    <nav>
-        <a href="index.html">Accueil</a> |
-        <a href="sommaire.html">Sommaire</a> |
-        <a href="quiz.html">Quiz</a> |
-        <a href="fiches.html">Fiches</a>
-    </nav>
+document.getElementById("next").onclick = () => {
+    if (current < slides.length - 1) current++;
+    document.getElementById("slide").src = slides[current];
+}
+
+document.getElementById("prev").onclick = () => {
+    if (current > 0) current--;
+    document.getElementById("slide").src = slides[current];
+}
+</script>
+
+<br><br>
+<a href="index.html">🔙 Retour à l'accueil</a> | 
+<a href="sommaire.html">📑 Sommaire</a>
+
 </body>
 </html>
