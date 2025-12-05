@@ -30,7 +30,47 @@ button {
 
 <div class="nav">
 <button id="prev">⬅ Précédent</button>
-<button id="next">Suivant ➡</button>
+<button id="next">Suivant ➡</<!-- Boutons de navigation -->
+<div style="display:flex; justify-content:center; gap:10px; margin:20px;">
+  <a href="cours1.html" style="
+      padding:10px 15px;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+      font-family: 'Poppins', sans-serif;
+      font-weight:600;
+      transition: transform 0.2s;
+  " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    Précédent
+  </a>
+
+  <a href="cours2.html" style="
+      padding:10px 15px;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+      font-family: 'Poppins', sans-serif;
+      font-weight:600;
+      transition: transform 0.2s;
+  " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    Suivant
+  </a>
+
+  <a href="Fiches/fiches.html" style="
+      padding:10px 15px;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+      font-family: 'Poppins', sans-serif;
+      font-weight:600;
+      transition: transform 0.2s;
+  " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    Fiches recto-verso
+  </a>
+</div>
 </div>
 
 <script>
