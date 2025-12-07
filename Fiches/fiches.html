@@ -2,176 +2,184 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Fiches Recto-Verso</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fiches Mémo - Recto Verso</title>
+<link rel="stylesheet" href="style.css">
+
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f8;
-    text-align: center;
-    padding: 30px;
+body{
+    background-color:#0a0f24;
+    color:white;
+    margin:0;
+    text-align:center;
+    font-family:Arial, sans-serif;
 }
 
-h1 {
-    margin-bottom: 30px;
-    color: #1a237e; /* bleu marine */
+/* Correction du header */
+header{
+    background:#1e293b;
+    color:#00eaff;
+    padding:20px;
+    font-size:28px;
+    font-weight:bold;
+    text-transform:uppercase;
 }
 
-/* Bouton Accueil */
-#homeBtn {
-    display: inline-block;
-    margin-bottom: 25px;
-    padding: 12px 20px;
-    background: linear-gradient(135deg, #1a237e, #536dfe);
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
+/* navbar comme les autres pages */
+nav{
+    background:#162033;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:12px;
+}
+nav a{
+    color:#82f3ff;
+    font-weight:bold;
+    text-decoration:none;
+}
+nav a:hover{
+    color:white;
 }
 
-/* Container des cartes */
+/* --- FICHES RECTO/VERSO --- */
+
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    padding:30px;
 }
 
-/* Style cartes */
 .card {
-    width: 250px;
-    height: 160px;
-    perspective: 1000px;
+    width:250px;
+    height:160px;
+    perspective:1000px;
 }
 
 .card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    cursor: pointer;
+    position:relative;
+    width:100%;
+    height:100%;
+    transition:transform 0.6s;
+    transform-style:preserve-3d;
+    cursor:pointer;
 }
 
 .card:hover .card-inner {
-    transform: rotateY(180deg);
+    transform:rotateY(180deg);
 }
 
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    backface-visibility: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    padding: 15px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-    color: #fff;
-    text-align: center;
-    font-size: 16px;
+.card-front,.card-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:15px;
+    backface-visibility:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+    padding:15px;
+    box-shadow:0 6px 15px rgba(0,0,0,0.25);
+    color:#fff;
+    text-align:center;
+    font-size:16px;
 }
 
-/* Recto - bleu marine */
-.card-front {
-    background: linear-gradient(135deg, #1a237e, #283593);
+/* recto bleu foncé */
+.card-front{
+    background:linear-gradient(135deg,#1a237e,#283593);
 }
 
-/* Verso - bleu clair */
-.card-back {
-    background: linear-gradient(135deg, #536dfe, #8c9eff);
-    transform: rotateY(180deg);
+/* verso bleu clair */
+.card-back{
+    background:linear-gradient(135deg,#536dfe,#8c9eff);
+    transform:rotateY(180deg);
 }
 </style>
 </head>
+
 <body>
 
-<h1>Fiches Recto-Verso</h1>
-<a href="../index.html" id="homeBtn">Accueil</a>
+<header>Fiches Recto-Verso</header>
+
+<nav>
+    <a href="index.html">Accueil</a>
+    <a href="sommaire.html">Sommaire</a>
+    <a href="cours.html">Cours</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="Fiches.html">Fiches</a>
+</nav>
 
 <div class="container">
 
 <!-- Fiche 1 -->
-<div class="card">
-  <div class="card-inner">
-    <div class="card-front">Qu’est-ce qu’un réseau informatique ?</div>
-    <div class="card-back">Un ensemble d’ordinateurs et périphériques connectés pour partager informations et ressources.</div>
-  </div>
-</div>
+<div class="card"><div class="card-inner">
+<div class="card-front">Qu’est-ce qu’un réseau informatique ?</div>
+<div class="card-back">Un ensemble d’ordinateurs connectés pour partager des ressources.</div>
+</div></div>
 
 <!-- Fiche 2 -->
-<div class="card">
-  <div class="card-inner">
-    <div class="card-front">Avantages d’un réseau</div>
-    <div class="card-back">Partage de ressources, communication rapide, centralisation des données.</div>
-  </div>
-</div>
+<div class="card"><div class="card-inner">
+<div class="card-front">Avantages d’un réseau</div>
+<div class="card-back">Partage de ressources, communication rapide, centralisation.</div>
+</div></div>
 
 <!-- Fiche 3 -->
-<div class="card">
-  <div class="card-inner">
-    <div class="card-front">Inconvénients d’un réseau</div>
-    <div class="card-back">Coût d’installation, maintenance, sécurité à assurer.</div>
-  </div>
-</div>
+<div class="card"><div class="card-inner">
+<div class="card-front">Inconvénients</div>
+<div class="card-back">Coût, maintenance, risques de sécurité.</div>
+</div></div>
 
 <!-- Fiche 4 -->
-<div class="card">
-  <div class="card-inner">
-    <div class="card-front">Topologies de réseau</div>
-    <div class="card-back">Étoile, Bus, Anneau, Maillage.</div>
-  </div>
-</div>
+<div class="card"><div class="card-inner">
+<div class="card-front">Topologies</div>
+<div class="card-back">Étoile, Bus, Anneau, Maillage.</div>
+</div></div>
 
 <!-- Fiche 5 -->
-<div class="card">
-  <div class="card-inner">
-    <div class="card-front">Équipements d’un réseau</div>
-    <div class="card-back">Routeurs, switchs, câbles, points d’accès, cartes réseau.</div>
-  </div>
-</div>
+<div class="card"><div class="card-inner">
+<div class="card-front">Équipements</div>
+<div class="card-back">Routeur, switch, câble, carte réseau, Wi-Fi.</div>
+</div></div>
 
 <!-- Fiche 6 -->
-<div class="card">
-  <div class="card-inner">
-    <div class="card-front">Classification géographique</div>
-    <div class="card-back">LAN (Local), MAN (Métropolitain), WAN (Large).</div>
-  </div>
-</div>
+<div class="card"><div class="card-inner">
+<div class="card-front">Classification</div>
+<div class="card-back">LAN, MAN, WAN.</div>
+</div></div>
 
 <!-- Fiche 7 -->
-<div class="card">
-  <div class="card-inner">
-    <div class="card-front">Topologie en étoile</div>
-    <div class="card-back">Tous les appareils connectés à un hub ou switch central.</div>
-  </div>
-</div>
+<div class="card"><div class="card-inner">
+<div class="card-front">Étoile</div>
+<div class="card-back">Tous connectés au centre (switch).</div>
+</div></div>
 
 <!-- Fiche 8 -->
-<div class="card">
-  <div class="card-inner">
-    <div class="card-front">Topologie en bus</div>
-    <div class="card-back">Tous les appareils sont connectés à un câble principal.</div>
-  </div>
-</div>
+<div class="card"><div class="card-inner">
+<div class="card-front">Bus</div>
+<div class="card-back">Tous sur un câble central.</div>
+</div></div>
 
 <!-- Fiche 9 -->
-<div class="card">
-  <div class="card-inner">
-    <div class="card-front">Topologie en anneau</div>
-    <div class="card-back">Chaque appareil est connecté au suivant formant un cercle.</div>
-  </div>
-</div>
+<div class="card"><div class="card-inner">
+<div class="card-front">Anneau</div>
+<div class="card-back">Connexion en cercle.</div>
+</div></div>
 
 <!-- Fiche 10 -->
-<div class="card">
-  <div class="card-inner">
-    <div class="card-front">Topologie maillée</div>
-    <div class="card-back">Chaque appareil est connecté à plusieurs autres appareils.</div>
-  </div>
-</div>
+<div class="card"><div class="card-inner">
+<div class="card-front">Maillée</div>
+<div class="card-back">Chaque machine connectée à plusieurs autres.</div>
+</div></div>
 
 </div>
 </body>
 </html>
+    
+
+
+
+
